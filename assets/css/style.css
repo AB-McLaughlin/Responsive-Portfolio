@@ -215,22 +215,29 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
-
-@media only screen and (max-width: 980px) {
-  /*For large devices:*/
 /*do we need to worry about container min height?  line height in body? font-size?*/
-
- 
-}
-  /*For medium devices:*/
 /*not working: p flex-direction:columns;*/
+/*how can width be 100% for all screen sizes?*/
+
+  /*For large devices:*/
+/* The width is 100%, when the viewport is 980px or smaller */
+@media only screen and (max-width: 980px) {
+  .left, .main, .right 
+  width: 100%; 
+}    
+
+  /*For medium devices:*/
+
 @media screen and (max-width: 768px) {
+  .left, .main, .right
+  width: 100%;
 
   
 }
 
-
+/*For extra small devices:*/
 @media only screen and (max-width: 640px) {
-  /*For extra small devices:*/
+  .left, .main, .right
+  width: 100%;
 
 }
